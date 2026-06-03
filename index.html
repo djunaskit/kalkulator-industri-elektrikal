@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Motor Current Calculator</title>
+</head>
+<body>
 
+<h2>Motor Current Calculator</h2>
+
+<label>Power (kW)</label>
+<input type="number" id="power">
+
+<br><br>
+
+<label>Voltage (V)</label>
+<input type="number" id="voltage">
+
+<br><br>
+
+<label>Power Factor</label>
+<input type="number" id="pf" step="0.01">
+
+<br><br>
+
+<label>Efficiency</label>
+<input type="number" id="eff" step="0.01">
+
+<br><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<h3 id="result"></h3>
+
+<script src="script.js"></script>
+
+</body>
+</html>
