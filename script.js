@@ -25,7 +25,11 @@ document.getElementById("result")
 "Current = " +
 current.toFixed(2) +
 " A";
+  "<br>" +
+"Recommended Cable = " +
+cable;
 
+let cable;
 if(current <= 20)
 cable = "2.5 mm²";
 
