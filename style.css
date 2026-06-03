@@ -5,6 +5,10 @@ body{
     padding:20px;
 }
 
+.judul{
+    text-align:left;
+}
+
 .container{
     max-width:600px;
     margin:auto;
