@@ -41,7 +41,7 @@ document.getElementById("result")
 .innerHTML =
 "Current = " +
 current.toFixed(2) +
-" A"; +
+" A" +
 "<br>" +
 "Recommended Cable = " +
 cable;
