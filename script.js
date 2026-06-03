@@ -26,4 +26,19 @@ document.getElementById("result")
 current.toFixed(2) +
 " A";
 
+if(current <= 20)
+cable = "2.5 mm²";
+
+else if(current <= 32)
+cable = "4 mm²";
+
+else if(current <= 40)
+cable = "6 mm²";
+
+else if(current <= 63)
+cable = "16 mm²";
+
+else
+cable = "25 mm²";
+  
 }
