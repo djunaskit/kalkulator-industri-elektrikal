@@ -20,15 +20,6 @@ let current =
 (power * 1000) /
 (1.732 * voltage * pf * eff);
 
-document.getElementById("result")
-.innerHTML =
-"Current = " +
-current.toFixed(2) +
-" A"; +
-"<br>" +
-"Recommended Cable = " +
-cable;
-
 let cable;
 if(current <= 20)
 cable = "2.5 mm²";
@@ -44,5 +35,15 @@ cable = "16 mm²";
 
 else
 cable = "25 mm²";
+ 
+  
+document.getElementById("result")
+.innerHTML =
+"Current = " +
+current.toFixed(2) +
+" A"; +
+"<br>" +
+"Recommended Cable = " +
+cable;
   
 }
