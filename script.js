@@ -39,11 +39,6 @@ cable = "25 mm²";
   
 document.getElementById("result")
 .innerHTML =
-"Current = " +
-current.toFixed(2) +
-" A" +
-"<br>" +
-"Recommended Cable = " +
-cable;
+TEST "<br>" TEST CABLE;
   
 }
