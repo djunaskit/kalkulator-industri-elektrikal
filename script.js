@@ -46,12 +46,12 @@ arus =
 
 let arusStartDol = arus * 6;
 
-let startingFactor = parseFloat(
+let factorStarting = parseFloat(
 document.getElementById("startingFactor").value
 );
 
 let arusStartDOL =
-arus * startingFactor;
+arus * factorStarting;
 
 let persenLonjakan =
 ((arusStartDOL - arus) / arus) * 100;
