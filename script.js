@@ -1,11 +1,11 @@
-function calculate(){
+function kalkulasi(){
 
-let power = parseFloat(
-document.getElementById("power").value
+let daya = parseFloat(
+document.getElementById("daya").value
 );
 
-let voltage = parseFloat(
-document.getElementById("voltage").value
+let tegangan = parseFloat(
+document.getElementById("tegangan").value
 );
 
 let pf = parseFloat(
@@ -16,112 +16,112 @@ let eff = parseFloat(
 document.getElementById("eff").value
 );
 
-let length = parseFloat(
-document.getElementById("length").value
+let panjang = parseFloat(
+document.getElementById("panjang").value
 );
 
-let resistance = parseFloat(
-document.getElementById("resistance").value
+let resistansi = parseFloat(
+document.getElementById("resistansi").value
 );
 
-let phase =
-document.getElementById("phase").value;
+let fasa =
+document.getElementById("fasa").value;
  
-let current;
-if(phase == "1"){
+let arus;
+if(fasa == "1"){
 
-current =
-(power * 1000) /
-(voltage * pf * eff);
+arus =
+(daya * 1000) /
+(tegangan * pf * eff);
 
 }
 
 else{
 
-current =
-(power * 1000) /
-(1.732 * voltage * pf * eff);
+arus =
+(daya * 1000) /
+(1.732 * tegangan * pf * eff);
 
 }
  
-let voltageDrop;
+let teganganDrop;
 
-if(phase == "1"){
+if(fasa == "1"){
 
-    voltageDrop =
-    (2 * current * resistance * length)
+    teganganDrop =
+    (2 * arus * resistansi * panjang)
     / 1000;
 
 }
 else{
 
-    voltageDrop =
-    (1.732 * current * resistance * length)
+    teganganDrop =
+    (1.732 * arus * resistansi * panjang)
     / 1000;
 
 }
-let voltageDropPercent =
-(voltageDrop / voltage) * 100;
+let presentaseDropTegangan =
+(teganganDrop / tegangan) * 100;
  
-let cable;
-if(current <= 18)
-cable = "2.5 mm²";
+let kabel;
+if(arus <= 18)
+kabel = "2.5 mm²";
 
-else if(current <= 25)
-cable = "4 mm²";
+else if(arus <= 25)
+kabel = "4 mm²";
 
-else if(current <= 32)
-cable = "6 mm²";
+else if(arus <= 32)
+kabel = "6 mm²";
 
-else if(current <= 41)
-cable = "10 mm²";
+else if(arus <= 41)
+kabel = "10 mm²";
  
-else if(current <= 57)
-cable = "16 mm²";
+else if(arus <= 57)
+kabel = "16 mm²";
 
-else if(current <= 76)
-cable = "25 mm²";
+else if(arus <= 76)
+kabel = "25 mm²";
 
-else if(current <= 101)
-cable = "35 mm²";
+else if(arus <= 101)
+kabel = "35 mm²";
 
-else if(current <= 125)
-cable = "50 mm²";
+else if(arus <= 125)
+kabel = "50 mm²";
 
 else
-cable = "Check Engineering Design";
+cable = "Cek Desain Teknis";
 
-let mccb = calculateMCCB(current); 
+let mccb = kalkulasiMCCB(arus); 
   
-document.getElementById("result")
+document.getElementById("hasil")
 .innerHTML =
- "Phase = " + 
- phase + 
- " Phase" +
+ "Fasa = " + 
+ fasa + 
+ " Fasa" +
  "<br><br>" +
- "Current = " + 
- current.toFixed(2) + 
+ "Arus = " + 
+ arus.toFixed(2) + 
  " A" + 
  "<br><br>" + 
- "Recommended Cable = " + 
- cable +
+ "Rekomendasi Kabel = " + 
+ kabel +
  "<br><br>" +
- "Recommended MCCB = " +
+ "Rekomendasi MCCB = " +
  mccb +
  " A"+
  "<br><br>" +
- "Voltage Drop = " +
- voltageDrop.toFixed(2) +
+ "Tegangan Drop = " +
+ teganganDrop.toFixed(2) +
  " V" +
  "<br>" +
- "Voltage Drop = " +
- voltageDropPercent.toFixed(2) +
+ "Tegangan Drop = " +
+ persentaseDropTegangan.toFixed(2) +
  " %";
   
 }
-function calculateMCCB(current){
+function kalkulasiMCCB(arus){
 
-    let requiredCurrent = current * 1.25;
+    let butuhArus = arus * 1.25;
 
     const ratings = [
         6,10,16,20,25,32,40,50,
@@ -132,7 +132,7 @@ function calculateMCCB(current){
 
     for(let rating of ratings){
 
-        if(requiredCurrent <= rating){
+        if(butuhArus <= rating){
             return rating;
         }
 
