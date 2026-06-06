@@ -71,7 +71,11 @@ cable = "25 mm²";
   
 document.getElementById("result")
 .innerHTML =
-"Current = " + 
+ "Phase = " + 
+ phase + 
+ " Phase" +
+ "<br><br>" +
+ "Current = " + 
  current.toFixed(2) + 
  " A" + 
  "<br><br>" + 
