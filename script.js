@@ -27,7 +27,7 @@ document.getElementById("resistance").value
 let phase =
 document.getElementById("phase").value;
  
-let current =
+let current;
 if(phase == "1"){
 
 current =
@@ -64,21 +64,34 @@ let voltageDropPercent =
 (voltageDrop / voltage) * 100;
  
 let cable;
-if(current <= 20)
+if(current <= 18)
 cable = "2.5 mm²";
 
-else if(current <= 32)
+else if(current <= 25)
 cable = "4 mm²";
 
-else if(current <= 40)
+else if(current <= 32)
 cable = "6 mm²";
 
-else if(current <= 63)
+else if(current <= 41)
+cable = "10 mm²";
+ 
+else if(current <= 57)
 cable = "16 mm²";
 
-else
+else if(current <= 76)
 cable = "25 mm²";
- 
+
+else if(current <= 101)
+cable = "35 mm²";
+
+else if(current <= 125)
+cable = "50 mm²";
+
+else
+cable = "Check Engineering Design";
+
+let mccb = calculateMCCB(current); 
   
 document.getElementById("result")
 .innerHTML =
@@ -93,6 +106,10 @@ document.getElementById("result")
  "Recommended Cable = " + 
  cable +
  "<br><br>" +
+ "Recommended MCCB = " +
+ mccb +
+ " A"+
+ "<br><br>" +
  "Voltage Drop = " +
  voltageDrop.toFixed(2) +
  " V" +
@@ -101,4 +118,25 @@ document.getElementById("result")
  voltageDropPercent.toFixed(2) +
  " %";
   
+}
+function calculateMCCB(current){
+
+    let requiredCurrent = current * 1.25;
+
+    const ratings = [
+        6,10,16,20,25,32,40,50,
+        63,80,100,125,160,200,
+        250,315,400,500,630,
+        800,1000,1250,1600
+    ];
+
+    for(let rating of ratings){
+
+        if(requiredCurrent <= rating){
+            return rating;
+        }
+
+    }
+
+    return ratings[ratings.length - 1];
 }
