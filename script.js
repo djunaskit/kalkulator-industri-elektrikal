@@ -115,7 +115,7 @@ document.getElementById("hasil")
  " V" +
  "<br>" +
  "Tegangan Drop = " +
- persentaseDropTegangan.toFixed(2) +
+ presentaseDropTegangan.toFixed(2) +
  " %";
   
 }
