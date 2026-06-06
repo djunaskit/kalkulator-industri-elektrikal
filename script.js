@@ -23,6 +23,9 @@ document.getElementById("length").value
 let resistance = parseFloat(
 document.getElementById("resistance").value
 );
+
+let phase =
+document.getElementById("phase").value;
  
 let current =
 (power * 1000) /
