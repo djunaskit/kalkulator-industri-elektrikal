@@ -28,9 +28,22 @@ let phase =
 document.getElementById("phase").value;
  
 let current =
+if(phase == "1"){
+
+current =
+(power * 1000) /
+(voltage * pf * eff);
+
+}
+
+else{
+
+current =
 (power * 1000) /
 (1.732 * voltage * pf * eff);
 
+}
+ 
 let voltageDrop =
 (1.732 * current * resistance * length)
 /
