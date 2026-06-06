@@ -92,9 +92,6 @@ else
 kabel = "Cek Desain Teknis";
 
 let mccb = kalkulasiMCCB(arus); 
-
-console.log("Arus =", arus);
-console.log("Kabel =", kabel);
  
 document.getElementById("hasil")
 .innerHTML =
