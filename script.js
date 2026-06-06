@@ -89,7 +89,7 @@ else if(arus <= 125)
 kabel = "50 mm²";
 
 else
-kabel = "Cek Desain Teknis";
+kabel = "Check Engineering Design";
 
 let mccb = kalkulasiMCCB(arus); 
   
