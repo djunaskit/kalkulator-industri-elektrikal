@@ -8,15 +8,15 @@
 <body>
 
 <div class="container">
-<h2 class="judul">Motor Current Calculator</h2>
+<h2 class="judul">Kalkulator Daya</h2>
 
-<label>Power (kW)</label>
-<input type="number" id="power">
+<label>Daya (kW)</label>
+<input type="number" id="daya">
 
 <br><br>
 
-<label>Voltage (V)</label>
-<input type="number" id="voltage">
+<label>Tegangan (V)</label>
+<input type="number" id="tegangan">
 
 <br><br>
 
@@ -25,40 +25,40 @@
 
 <br><br>
 
-<label>Efficiency</label>
+<label>Efisiensi</label>
 <input type="number" id="eff" step="0.01">
 
 <br><br>
 
-<label>Cable Length (m)</label>
-<input type="number" id="length">
+<label>Panjang Kabel (m)</label>
+<input type="number" id="panjang">
 
 <br><br>
 
-<label>Cable Resistance (Ω/km)</label>
-<input type="number" id="resistance" step="0.01">
+<label>Resistor (Ω/km)</label>
+<input type="number" id="resistansi" step="0.01">
 
 <br><br>
 
-<label>Phase</label>
+<label>Fasa</label>
 
-<select id="phase">
+<select id="fasa">
 
 <option value="1">
-1 Phase
+1 Fasa
 </option>
 
 <option value="3" selected>
-3 Phase
+3 Fasa
 </option>
 
 </select>
 
 <br><br>    
     
-<button onclick="calculate()">Calculate</button>
+<button onclick="calculate()">Kalkulasi</button>
 
-<h3 id="result"></h3>
+<h3 id="hasil"></h3>
 
 <script src="script.js"></script>
 
