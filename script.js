@@ -44,11 +44,22 @@ current =
 
 }
  
-let voltageDrop =
-(1.732 * current * resistance * length)
-/
-1000;
+let voltageDrop;
 
+if(phase == "1"){
+
+    voltageDrop =
+    (2 * current * resistance * length)
+    / 1000;
+
+}
+else{
+
+    voltageDrop =
+    (1.732 * current * resistance * length)
+    / 1000;
+
+}
 let voltageDropPercent =
 (voltageDrop / voltage) * 100;
  
@@ -90,4 +101,45 @@ document.getElementById("result")
  voltageDropPercent.toFixed(2) +
  " %";
   
+}
+function calculateMCCB(current) {
+
+    let requiredCurrent = current * 1.25;
+
+    const mccbRatings = [
+        6,
+        10,
+        16,
+        20,
+        25,
+        32,
+        40,
+        50,
+        63,
+        80,
+        100,
+        125,
+        160,
+        200,
+        250,
+        315,
+        400,
+        500,
+        630,
+        800,
+        1000,
+        1250,
+        1600
+    ];
+
+    let selectedMCCB = mccbRatings[mccbRatings.length - 1];
+
+    for(let rating of mccbRatings){
+        if(requiredCurrent <= rating){
+            selectedMCCB = rating;
+            break;
+        }
+    }
+
+    return selectedMCCB;
 }
