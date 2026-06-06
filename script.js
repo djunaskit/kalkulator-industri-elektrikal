@@ -43,6 +43,18 @@ arus =
 (1.732 * tegangan * pf * eff);
 
 }
+
+let arusStartDol = arus * 6;
+
+let factorStart = parseFloat(
+document.getElementById("startingFactor").value
+);
+
+let arusStartDOL =
+arus * factorStart;
+
+let persenLonjakan =
+((arusStartDOL - arus) / arus) * 100;
  
 let teganganDrop;
 
@@ -60,7 +72,7 @@ else{
     / 1000;
 
 }
-let presentaseDropTegangan =
+let persenDropTegangan =
 (teganganDrop / tegangan) * 100;
  
 let kabel;
@@ -101,7 +113,15 @@ document.getElementById("hasil")
  "<br><br>" +
  "Arus = " + 
  arus.toFixed(2) + 
- " A" + 
+ " A" +
+ "<br><br>" +
+ "Arus Start DOL = " +
+ arusStartDol.toFixed(2) +
+ " A" +
+ "<br><br>" +
+ "Prosentase Arus Start DOL = " +
+ persenLonjakan.toFixed(2) +
+ " %" +
  "<br><br>" + 
  "Rekomendasi Kabel = " + 
  kabel +
@@ -115,7 +135,7 @@ document.getElementById("hasil")
  " V" +
  "<br>" +
  "Tegangan Drop = " +
- presentaseDropTegangan.toFixed(2) +
+ persenDropTegangan.toFixed(2) +
  " %";
   
 }
