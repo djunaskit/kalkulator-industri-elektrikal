@@ -76,32 +76,63 @@ let persenDropTegangan =
 (teganganDrop / tegangan) * 100;
  
 let kabel;
+
 if(arus <= 18)
-kabel = "2.5 mm²";
+    kabel = "2.5 mm²";
 
 else if(arus <= 25)
-kabel = "4 mm²";
+    kabel = "4 mm²";
 
 else if(arus <= 32)
-kabel = "6 mm²";
+    kabel = "6 mm²";
 
 else if(arus <= 41)
-kabel = "10 mm²";
- 
+    kabel = "10 mm²";
+
 else if(arus <= 57)
-kabel = "16 mm²";
+    kabel = "16 mm²";
 
 else if(arus <= 76)
-kabel = "25 mm²";
+    kabel = "25 mm²";
 
 else if(arus <= 101)
-kabel = "35 mm²";
+    kabel = "35 mm²";
 
 else if(arus <= 125)
-kabel = "50 mm²";
+    kabel = "50 mm²";
+
+else if(arus <= 150)
+    kabel = "70 mm²";
+
+else if(arus <= 192)
+    kabel = "95 mm²";
+
+else if(arus <= 232)
+    kabel = "120 mm²";
+
+else if(arus <= 269)
+    kabel = "150 mm²";
+
+else if(arus <= 309)
+    kabel = "185 mm²";
+
+else if(arus <= 353)
+    kabel = "240 mm²";
+
+else if(arus <= 415)
+    kabel = "300 mm²";
+
+else if(arus <= 475)
+    kabel = "400 mm²";
+
+else if(arus <= 545)
+    kabel = "500 mm²";
+
+else if(arus <= 620)
+    kabel = "630 mm²";
 
 else
-kabel = "Cek Desain Teknis";
+    kabel = "Gunakan Parallel Cable"; 
 
 let mccb = kalkulasiMCCB(arus); 
  
