@@ -178,7 +178,7 @@ document.getElementById("hasil")
  "Tegangan Drop = " +
  teganganDrop.toFixed(2) +
  " V" +
- "<br>" +
+ "<br><br>" +
  "Tegangan Drop = " +
  persenDropTegangan.toFixed(2) +
  " %";
