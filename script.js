@@ -157,7 +157,7 @@ document.getElementById("hasil")
  " A" +
  "<br><br>" +
  "Arus Starting Star-Delta = " +
- arusStartStarDelta.toFixed(2) +
+ arusStartingStarDelta.toFixed(2) +
  " A" +
  "<br><br>" +
  "Prosentase Arus Start DOL = " +
