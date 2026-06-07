@@ -53,8 +53,14 @@ document.getElementById("startingFactor").value
 let arusStartDOL =
 arus * factorStarting;
 
+let arusStartingStarDelta =
+arusStartDOL / 3;
+ 
 let persenLonjakan =
 ((arusStartDOL - arus) / arus) * 100;
+
+let persenStarDelta =
+(arusStartingStarDelta / arusStartingDOL) * 100;
  
 let teganganDrop;
 
@@ -150,8 +156,16 @@ document.getElementById("hasil")
  arusStartDol.toFixed(2) +
  " A" +
  "<br><br>" +
+ "Arus Starting Star-Delta = " +
+ arusStartStarDelta.toFixed(2) +
+ " A" +
+ "<br><br>" +
  "Prosentase Arus Start DOL = " +
  persenLonjakan.toFixed(2) +
+ " %" +
+ "<br><br>" +
+ "Prosentase Arus Starting Star-Delta = " +
+ persenStarDelta.toFixed(2) +
  " %" +
  "<br><br>" + 
  "Rekomendasi Kabel = " + 
