@@ -60,7 +60,7 @@ let persenLonjakan =
 ((arusStartDOL - arus) / arus) * 100;
 
 let persenStarDelta =
-(arusStartingStarDelta / arusStartDOL) * 100;
+(persenLonjakan / 3) * 100;
  
 let teganganDrop;
 
@@ -152,7 +152,7 @@ document.getElementById("hasil")
  arus.toFixed(2) + 
  " A" +
  "<br><br>" +
- "Arus Start DOL = " +
+ "Arus Starting DOL = " +
  arusStartDol.toFixed(2) +
  " A" +
  "<br><br>" +
@@ -160,7 +160,7 @@ document.getElementById("hasil")
  arusStartingStarDelta.toFixed(2) +
  " A" +
  "<br><br>" +
- "Prosentase Arus Start DOL = " +
+ "Prosentase Arus Starting DOL = " +
  persenLonjakan.toFixed(2) +
  " %" +
  "<br><br>" +
