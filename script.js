@@ -44,8 +44,6 @@ arus =
 
 }
 
-let arusStartDol = arus * 6;
-
 let factorStarting = parseFloat(
 document.getElementById("startingFactor").value
 );
