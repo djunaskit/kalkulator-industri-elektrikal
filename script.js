@@ -60,7 +60,7 @@ let persenLonjakan =
 ((arusStartDOL - arus) / arus) * 100;
 
 let persenStarDelta =
-(arusStartingStarDelta / arusStartingDOL) * 100;
+(arusStartingStarDelta / arusStartDOL) * 100;
  
 let teganganDrop;
 
